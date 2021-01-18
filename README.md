@@ -1,8 +1,6 @@
-# Welcome to your CDK TypeScript project!
+# Serverless Uptime Monitoring
 
-This is a blank project for TypeScript development with CDK.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+This is a simple CDK app for monitoring if a website is up and sending an email notification if it goes down.
 
 ## Useful commands
 
