@@ -1,12 +1,12 @@
-import * as cdk from '@aws-cdk/core';
-import { Code, Function, Runtime } from "@aws-cdk/aws-lambda";
-import { Rule, Schedule } from '@aws-cdk/aws-events';
-import { LambdaFunction } from '@aws-cdk/aws-events-targets';
-import { Duration } from '@aws-cdk/core';
-import { PolicyStatement } from '@aws-cdk/aws-iam';
+import { Duration, Stack, StackProps } from 'aws-cdk-lib';
+import { Rule, Schedule } from 'aws-cdk-lib/aws-events';
+import { LambdaFunction } from 'aws-cdk-lib/aws-events-targets';
+import { PolicyStatement } from 'aws-cdk-lib/aws-iam';
+import { Code, Function, Runtime } from 'aws-cdk-lib/aws-lambda';
+import { Construct } from 'constructs';
 
-export class CdkUptimeStack extends cdk.Stack {
-  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
+export class CdkUptimeStack extends Stack {
+  constructor(scope: Construct, id: string, props?: StackProps) {
     super(scope, id, props);
 
     const handler = new Function(this, 'UptimeHandler', {

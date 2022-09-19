@@ -1,7 +1,7 @@
 #!/usr/bin/env node
+import { App } from 'aws-cdk-lib';
 import 'source-map-support/register';
-import * as cdk from '@aws-cdk/core';
 import { CdkUptimeStack } from '../lib/cdk-uptime-stack';
 
-const app = new cdk.App();
+const app = new App();
 new CdkUptimeStack(app, 'CdkUptimeStack');
